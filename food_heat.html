@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var weight = prompt("请输入食物的重量/g")
+        var kJ_100g = prompt("请输入每100克含有的能量/kJ")
+        var kJ_kcal = 0.2389  // 1 千焦=0.2389 千卡
+        var kcal_100g = kJ_100g * kJ_kcal  // 千卡/100克
+        var kcal_g = kcal_100g / 100.  // 千卡/克
+        var Heat_kcal = weight * kcal_g  // 千卡 大卡
+        var Heat_kJ = weight * kJ_100g / 100.  // 千焦
+        alert("食物含有 " + Heat_kcal.toFixed(2) + " 千卡（大卡），" + Heat_kJ.toFixed(2) + " 千焦")
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
